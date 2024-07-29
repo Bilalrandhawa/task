@@ -88,12 +88,14 @@
                                                 </td>
                                                 <td>
                                                     <a href="{{ route('tasks.edit', $data->id) }}" class="btn btn-secondary">Edit</a> |
-                                                    <form action="{{ route('tasks.destroy', $data->id) }}" method="POST"
-                                                        style="display:inline;">
+                                                    <form action="{{ route('tasks.destroy', $data->id) }}" method="POST" style="display:inline;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirmDelete();">Delete</button>
                                                     </form>
+                                                    
+                                                    
+                                                    
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -107,4 +109,9 @@
 
         </div>
     </div>
+    <script>
+        function confirmDelete() {
+            return confirm('Do you really want to delete this record?');
+        }
+    </script>
 @endsection
