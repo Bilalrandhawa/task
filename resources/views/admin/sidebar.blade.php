@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="user-profile">
       <div class="user-image">
-        <img src="assets/images/faces/face28.png">
+        <img src="/assets/images/faces/face28.png">
       </div>
       <div class="user-name">
          {{$userName}}

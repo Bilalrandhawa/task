@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/add-task', [TaskController::class, 'AddTask']);
     Route::post('/tasks/store', [TaskController::class, 'store'])->name('task.store');
     Route::delete('/tasks/{id}', [TaskController::class, 'destroy'])->name('tasks.destroy');
-    Route::get('/{id}', [TaskController::class, 'edit'])->name('tasks.edit');
+    Route::get('/edit-task/{id}', [TaskController::class, 'edit'])->name('tasks.edit');
     Route::post('/task/update', [TaskController::class, 'update'])->name('task.update');
     });
 require __DIR__.'/auth.php';
